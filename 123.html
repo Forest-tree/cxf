@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tab 标签</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+
+        .tabs {
+            width: 400px;
+            margin: 30px auto;
+            background-color: #FFF;
+            border: 1px solid #C0DCC0;
+            box-sizing: border-box;
+        }
+
+        .tabs nav {
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            overflow: hidden;
+            background-color: #C0DCC0;
+            display: flex;
+        }
+
+        nav a {
+            display: block;
+            width: 100px;
+            border-right: 1px solid #FFF;
+            color: #000;
+            text-decoration: none;
+        }
+
+        nav a:last-child {
+            border-right: 0 none;
+        }
+
+        nav a.active {
+            background-color: #9BAF9B;
+        }
+
+        .cont {
+            overflow: hidden;
+            display: none;
+        }
+
+        .cont ol {
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tabs">
+        <nav>
+            <a href="javascript:;" data-cont="local">国内新闻</a>
+            <a href="javascript:;" data-cont="global">国际新闻</a>
+            <a href="javascript:;" data-cont="sports">体育新闻</a>
+            <a href="javascript:;" data-cont="funny">娱乐新闻</a>
+        </nav>
+        <section class="cont" id="local">
+            <ol>
+                <li>河感在生矿难，死伤在全10</li>
+            </ol>
+        </section>
+        <section class="cont" id="global">
+            <ol>
+                <li>河南再次发生矿难，死伤人数超过100</li>
+            </ol>
+        </section>
+        <section class="cont" id="sports">
+            <ol>
+                <li>河南再次发生矿难，死伤人数超过100</li>
+            </ol>
+        </section>
+        <section class="cont" id="funny">
+            <ol>
+                <li>福建发生血腥命案:两女遭割喉 1男孩被砍数刀</li>
+            </ol>
+        </section>
+    </div>
+    <script>
+        /*
+         * 需求：
+         *   1、设置默认显示项
+         *   2、实现点击切换tab栏的功能
+         * */
+        //index 表示默认显示那一项的索引值
+
+        function tab(index) {
+            //  1、设置默认显示项
+            var navs = document.querySelectorAll("nav a"); //获取所有的导航
+            navs[index].classList.add("active"); //让导航变色
+            //1-2让对应的内容区域显示
+            var id = navs[index].dataset['cont']; //获取当前自定义属性，赋值给变量这个id
+            document.querySelector('#' + id).style.display = 'block'; //这个系获取#，代表系#，id就系代表了当前的索引的cont自定义的属性
+            //  console.log("#"+id)
+            //2 实现点击tab栏切换
+            //2-1给所有的导航绑定点击事件
+            for (var i = 0; i < navs.length; i++) { //navs现在代表索引的nav里面的a标签
+                // 给每个a标签注册点击事件
+                navs[i].onclick = function () {
+                    //1-排他
+                    //点击当前导航栏的时候，就赋值颜色给他，另外一个就变回原来的颜色
+                    var currNav = document.querySelector('.active'); //获取当前的颜色类名赋值给新的变量
+                    // console.log(currNav);
+                    currNav.classList.remove('active'); //删除active类名，点击导航栏时候，就会隐藏类名，也就是隐藏了css设置的颜色
+                    //让对应的内容区域隐藏
+                    var cid = currNav.dataset['cont']; //获取当前的自定义属性cont的，然后赋值给新的变量
+                    // console.log(cid);
+                    document.querySelector('#' + cid).style.display = 'none'; //获取文档中唯一属性的#funny，也就是#+cid，把他点击当前时候，就会隐藏当前的内容，
+                    //2-显示自己
+                    this.classList.add('active'); //点击当前的那个导航栏，就会添加这个类，这个类是点击当前的导航栏变色
+                    //让自己对应的内容区域显示
+                    var myid = this.dataset['cont']; //获取当前cont这个自定义属性赋值给myid
+                    document.querySelector("#" + myid).style.display = 'block'; //然后再获取全文档里面唯一的id  也就是#+当前的自定义属性，
+                }
+            }
+
+        }
+        tab(0); //调用函数
+    </script>
+</body>
+
+</html>

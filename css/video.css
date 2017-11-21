@@ -1,0 +1,182 @@
+/*右边固定烂开始*/
+.field {
+  width: 90px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  top: 74px;
+  right: 38px;
+  z-index: 3;
+}
+.field .field_consult {
+  width: 90px;
+  height: 100%;
+}
+.field .field_consult .field_consult_01 {
+  width: 90px;
+  height: 116px;
+  cursor: pointer;
+}
+.field .field_consult .field_consult_01 a:hover {
+  text-decoration: none;
+}
+.field .field_consult .field_consult_01 a h3 {
+  padding: 12px 20px 0 20px;
+  color: #a7faff;
+  font-size: 24px;
+}
+.field .field_consult .field_consult_01 a img {
+  width: 42px;
+  height: 38px;
+  position: absolute;
+  top: 70px;
+  right: 26px;
+}
+.field .field_consult .field_consult_01 a div {
+  width: 102px;
+  height: 38px;
+  position: absolute;
+  top: 22px;
+  right: 91px;
+  font-size: 14px;
+  line-height: 38px;
+  color: #000;
+  text-align: center;
+  display: none;
+}
+.field .field_consult .field_consult_01 a div a {
+  background: rgba(185, 228, 228, 0.5);
+  display: block;
+  width: 102px;
+  height: 38px;
+  font-size: 20px;
+}
+.field .field_consult .field_consult_01 a div a:hover {
+  color: #000;
+}
+.field .field_consult .field_consult_02 {
+  width: 100%;
+  height: 90px;
+  cursor: pointer;
+}
+.field .field_consult .field_consult_02 a:hover {
+  text-decoration: none;
+}
+.field .field_consult .field_consult_02 a h3 {
+  padding: 8px 28px 0 28px;
+  color: #fff;
+  font-size: 20px;
+}
+.field .field_consult .field_consult_02 a img {
+  width: 44px;
+  height: 48px;
+  position: absolute;
+  top: 150px;
+  right: 24px;
+}
+.field .field_consult .field_consult_02 a .field_consult_02_div {
+  width: 102px;
+  height: 38px;
+  position: absolute;
+  top: 132px;
+  right: 91px;
+  font-size: 14px;
+  line-height: 38px;
+  color: #000;
+  text-align: center;
+  display: none;
+}
+.field .field_consult .field_consult_02 a .field_consult_02_div a {
+  background: rgba(185, 228, 228, 0.5);
+  display: block;
+  width: 102px;
+  height: 38px;
+  font-size: 20px;
+}
+.field .field_consult .field_consult_02 a .field_consult_02_div a:hover {
+  color: #000;
+}
+.field .field_consult .field_consult_03 {
+  width: 100%;
+  height: 90px;
+  cursor: pointer;
+}
+.field .field_consult .field_consult_03 h3 {
+  padding: 10px 12px 0 0px;
+  color: #fff;
+  font-size: 18px;
+  width: 102px;
+}
+.field .field_consult .field_consult_03 img {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  top: 252px;
+  right: 22px;
+}
+.field .field_consult .field_consult_03 div {
+  background: url(../images/relation_05.png) no-repeat no-repeat;
+  width: 114px;
+  height: 114px;
+  position: absolute;
+  top: 196px;
+  right: 91px;
+  font-size: 14px;
+  line-height: 38px;
+  display: none;
+}
+.field .field_consult .field_consult_04 {
+  width: 100%;
+  height: 90px;
+  cursor: pointer;
+}
+.field .field_consult .field_consult_04 h3 {
+  padding: 8px 14px 0 24px;
+  color: #fff;
+  font-size: 20px;
+}
+.field .field_consult .field_consult_04 img {
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 340px;
+  right: 18px;
+}
+.field .field_consult .field_consult_04 div {
+  width: 114px;
+  height: 114px;
+  position: absolute;
+  top: 296px;
+  right: 91px;
+  font-size: 14px;
+  line-height: 38px;
+  display: none;
+}
+.field .field_consult .field_consult_04 div img {
+  width: 114px;
+  height: 114px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.field .field_consult .field_consult_05 {
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}
+.field .field_consult .field_consult_05 a {
+  padding: 6px 0px 0 18px;
+  color: #fff;
+  font-size: 16px;
+  display: block;
+}
+.field .field_consult .field_consult_05 a:after {
+  content: '';
+  background: url(../images/consult_05.png) no-repeat no-repeat;
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  bottom: -10px;
+  right: -18px;
+}
+/*右边固定烂结束*/

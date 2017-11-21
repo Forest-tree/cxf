@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>视频拍摄</title>
+	<link rel="stylesheet" href="http://cxf-img-new.b0.upaiyun.com/cxf/css/base.css">
+	<link rel="stylesheet" href="http://cxf-img-new.b0.upaiyun.com/cxf/css/video.css">
+
+	<head>
+		<meta charset="utf-8">
+		<style>
+			* {
+				font-family: "微软雅黑"
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			img {
+				display: block;
+				/* width: 100%; */
+			}
+
+			ul {
+				list-style: none;
+			}
+
+			h1 {
+				margin: 0;
+			}
+
+			p {
+				margin: 0;
+			}
+
+			input {
+				border: none;
+				margin: 0;
+				padding: 0;
+				outline: none;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.clearfix {
+				clear: both;
+			}
+			/* .box_top {
+				margin-bottom: 92px;
+				position: relative;
+				width: 100%;
+			} */
+			/* .box_top img {
+				width: 100%;
+			} */
+
+			.nav {
+				/*border: 1px red solid;*/
+				margin: 0 auto;
+				max-width: 900px;
+				position: absolute;
+				left: 680px;
+				top: 0;
+			}
+
+			.nav a {
+				color: #fff;
+			}
+
+			.nav li {
+				float: left;
+				font-weight: normal;
+				padding: 0 50px;
+				line-height: 98px;
+			}
+
+			.nav a:hover {
+				color: #f1921c;
+			}
+
+			.box_01 {
+				width: 1136px;
+				margin: 0 auto;
+			}
+
+			.box1_title {
+				padding-bottom: 30px;
+			}
+
+			.box1_title h1 {
+				font-size: 34px;
+				font-weight: bold;
+				width: 280px;
+				margin: 0 auto;
+				line-height: 28px;
+				margin-bottom: 12px;
+			}
+
+			.box1_title div {
+				width: 106px;
+				height: 2px;
+				background-color: black;
+				margin: 0 auto;
+			}
+
+			.box1_list {
+				padding-bottom: 76px;
+			}
+
+			.list01 {
+				/*border:1px red solid;*/
+				float: left;
+				width: 28%;
+			}
+
+			.list01 img {
+				float: left;
+				margin-right: 22px;
+			}
+
+			.list01 h1 {
+				font-size: 22px;
+				line-height: 34px;
+				color: #717171;
+			}
+
+			.list01 p {
+				font-size: 14px;
+				color: #666;
+				width: 245px;
+			}
+
+			.box2_title {
+				text-align: center;
+				padding-top: 92px;
+				padding-bottom: 30px;
+			}
+
+			.box2_title h1 {
+				font-size: 28px;
+				font-weight: bold;
+				line-height: 28px;
+				margin-bottom: 12px;
+			}
+
+			.box2_title div {
+				width: 106px;
+				height: 2px;
+				background-color: black;
+				margin: 0 auto;
+			}
+
+			.yimiao {
+				width: 1100px;
+				height: 406px;
+				background: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai2.png) no-repeat;
+				margin: 0 auto;
+			}
+
+
+			.box_03 {}
+
+			.box3_title {
+				text-align: center;
+				padding-top: 86px;
+				padding-bottom: 30px;
+			}
+
+			.box3_title h1 {
+				font-size: 28px;
+				font-weight: bold;
+				line-height: 28px;
+				margin-bottom: 12px;
+			}
+
+			.box3_title div {
+				width: 106px;
+				height: 2px;
+				background-color: black;
+				margin: 0 auto;
+			}
+
+			.table_box {
+				border: solid 15px #f54ccf;
+				width: 1106px;
+				margin: 0 auto;
+			}
+
+			.table_1 {
+				border: 2px dashed #f32bc6;
+				width: calc(50% - 4px);
+				text-align: center;
+				float: left;
+			}
+
+			.table_1 img {
+				margin: 0 auto;
+				margin-top: 26px;
+			}
+
+			.table_1 h1 {
+				font-size: 20px;
+				padding-top: 26px;
+				padding-bottom: 15px;
+			}
+
+			.table_1 p {
+				margin: 0 auto;
+				max-width: 430px;
+				font-size: 16px;
+				color: #232323;
+				margin-bottom: 24px;
+			}
+
+			.table_2 img {
+				margin-top: 41px;
+			}
+
+			.table_2 h1 {
+				padding-top: 41px;
+			}
+
+			.table_2 p {
+				margin-bottom: 47px;
+			}
+
+			.table_3 img {
+				margin-top: 37px;
+			}
+
+			.table_3 h1 {
+				padding-top: 37px;
+			}
+
+			.table_3 p {
+				margin-bottom: 45px;
+			}
+
+			.table_4 img {
+				margin-top: 37px;
+			}
+
+			.table_4 h1 {
+				padding-top: 37px;
+			}
+
+			.table_4 p {
+				margin-bottom: 63px;
+			}
+
+
+			.toutu_box {
+				width: 1136px;
+				margin: 0 auto;
+			}
+
+			.zou_toutu {
+				width: calc(72%);
+				text-align: center;
+				float: left;
+			}
+
+			.zou_toutu1 {
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.68);
+				width: calc(33.3% - 22px);
+				float: left;
+				margin: 0 10px;
+			}
+
+			.zou_toutu1:hover {
+				margin-top: 1px;
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+
+			.zou_toutu1 span {
+				color: #ec00ca;
+			}
+
+			.zou_toutu1 h1 {
+				font-size: 18px;
+				color: #666;
+				margin-top: 20px;
+			}
+
+			.zou_toutu1 p {
+				margin: 0 auto;
+				margin-top: 5px;
+				font-size: 16px;
+				width: 172px;
+			}
+
+			.zou_toutu1 div {
+				width: 136px;
+				height: 32px;
+				margin: 0 auto;
+				margin-top: 10px;
+				background: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai04_yuanjiaojuxing.png);
+				font-size: 14px;
+				color: white;
+				line-height: 32px;
+				margin-bottom: 14px;
+			}
+
+			.you_toutu {
+				float: left;
+				width: calc(28%);
+			}
+
+			.teshutuxing {
+				width: 266px;
+				height: 70px;
+				background-image: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai04_teshutuxing.png);
+				background-repeat: no-repeat;
+				font-size: 28px;
+				line-height: 28px;
+				font-weight: 600;
+				color: white;
+				padding-left: 32px;
+				padding-top: 14px
+			}
+
+			.toutu_wenan {
+				border: 2px #f43ecb solid;
+				margin-top: 20px;
+				padding-top: 20px;
+				padding-left: 12px;
+			}
+
+			.toutu_wenan p {
+				font-size: 16px;
+				color: #f54ccf;
+				margin-bottom: 26px;
+				max-width: 280px;
+			}
+
+			.toutu_wenan span {
+				font-weight: bold
+			}
+
+			.danpin_box {
+				width: 1136px;
+				margin: 0 auto;
+				overflow: hidden;
+				padding-bottom: 10px;
+			}
+
+			.zuo_danpin {
+				width: calc(50%);
+				float: left;
+			}
+
+			.zuo_danpin .zou_toutu1 {
+				width: calc(50% - 34px);
+			}
+
+			.you_danpin {
+				width: 50%;
+				float: left;
+			}
+
+			.you_danpin .toutu_wenan p {
+				max-width: 510px;
+			}
+
+			.teshutuxing2 {
+				width: 500px;
+				height: 70px;
+				background-image: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai05_teshutuxing.png);
+				background-repeat: no-repeat;
+				font-size: 28px;
+				ling-height: 28px;
+				font-weight: 600;
+				color: white;
+				padding-left: 32px;
+				padding-top: 14px
+			}
+
+			.danpin_wenan {
+				margin-top: 20px;
+				padding-top: 55px;
+				padding-left: 30px;
+			}
+
+			.danpin_wenan p {
+				margin-bottom: 28px;
+			}
+			/*第六模块*/
+
+			.box6_title {
+				padding-bottom: 45px;
+			}
+
+			.box6_listbox {
+				max-width: 1136px;
+				margin: 0 auto;
+			}
+
+			.box6_list1 {
+				width: calc(100% / 4 - 34px);
+				margin: 0 16px;
+				text-align: center;
+				float: left;
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.68);
+			}
+
+			.box6_list1:hover {
+				margin-top: 1px;
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+
+			.box6_list1 h1 {
+				font-size: 18px;
+				color: #666;
+				margin-top: 20px;
+			}
+
+			.box6_list1 p {
+				margin: 0 auto;
+				margin-top: 5px;
+				font-size: 16px;
+				width: 220px;
+			}
+
+			.box6_list1 div {
+				width: 136px;
+				height: 32px;
+				margin: 0 auto;
+				margin-top: 10px;
+				background: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai04_yuanjiaojuxing.png);
+				font-size: 14px;
+				color: white;
+				line-height: 32px;
+				margin-bottom: 14px;
+			}
+
+			.you_chuangyi {
+				width: calc(75% - 30px);
+				margin-left: 18px;
+			}
+
+			.teshutuxing3 {
+				width: 700px;
+				height: 70px;
+				background-image: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai06_teshutuxing.png);
+				background-repeat: no-repeat;
+				font-size: 28px;
+				line-height: 28px;
+				font-weight: 600;
+				color: white;
+				padding-left: 32px;
+				padding-top: 14px
+			}
+
+			.chuangyi_wenan {
+				margin-top: 30px;
+				padding-top: 55px;
+				padding-left: 30px;
+			}
+
+			.you_chuangyi .chuangyi_wenan p {
+				max-width: 600px;
+			}
+			/*第七模块*/
+
+			.box7_title {
+				padding-top: 126px;
+			}
+
+			.box7list_box {
+				max-width: 1136px;
+				margin: 0 auto;
+			}
+
+			.box7_list {
+				width: calc(100% / 3 - 104px);
+				text-align: center;
+				float: left;
+				margin: 0 52px;
+			}
+
+			.box7_list img {
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.68);
+			}
+
+			.box7_list img:hover {
+				margin-top: 1px;
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+
+			.box7_list h1 {
+				font-size: 18px;
+				color: #666;
+				margin-top: 20px;
+			}
+
+			.box7_list p {
+				margin: 12px 30px;
+				color: #676767;
+			}
+
+			.box7_list div {
+				width: 136px;
+				height: 32px;
+				margin: 0 auto;
+				margin-top: 10px;
+				background: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai04_yuanjiaojuxing.png);
+				font-size: 14px;
+				color: white;
+				line-height: 32px;
+			}
+
+			.box8_title {
+				padding-top: 116px;
+			}
+			/*第八部分*/
+
+			.box8list_box {
+				width: 1136px;
+				margin: 0 auto;
+				padding-bottom: 28px;
+			}
+
+			.box8_list {
+				width: calc(25% - 80px);
+				margin: 0 28px;
+				text-align: center;
+				float: left;
+			}
+
+			.box8_list img {
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.68);
+			}
+
+			.box8_list img:hover {
+				margin-top: 1px;
+				box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+			}
+
+			.box8_list p {
+				color: #676767;
+				margin: 12px auto;
+			}
+			/*第九部分*/
+
+			.box9_title {
+				color: white;
+			}
+
+			.box9_title div {
+				background: white;
+			}
+
+			.box_09 {
+				/* width: 1920px; */
+				width: 100%;
+				height: 450px;
+				background: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/banner03.png) no-repeat no-repeat;
+				background-size: 100%;
+			}
+			/* .box_09 .box3_title box9_title {
+		
+				} */
+
+			.fenlei_box {
+				color: white;
+				width: 1136px;
+				margin: 0 auto;
+				margin-top: 20px;
+				text-align: center;
+			}
+
+			.fenlei {
+				width: calc(25%);
+				text-align: center;
+				float: left;
+			}
+
+			.fenlei img {
+				margin: 0 auto;
+			}
+
+			.fenlei h1 {
+				font-size: 18px;
+				margin-top: 15px;
+			}
+
+			.fenlei p {
+				font-size: 14px;
+				max-width: 212px;
+				padding: 20px 0;
+				margin: 0 auto;
+			}
+			/*第九部分*/
+
+			.box_10 div {
+				width: 398px;
+				height: 46px;
+				background: url(http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai9-5.png);
+				text-align: center;
+				line-height: 46px;
+				font-size: 22px;
+				font-weight: bold;
+				color: #fff;
+				margin: 0 auto;
+				margin-top: 70px;
+			}
+			/*页尾部分*/
+
+			.box_bottom {
+				margin-top: 90px;
+				background: #337cd8;
+			}
+
+			.bottom_box {
+				max-width: 1136px;
+				margin: 0 auto;
+			}
+
+			.logo {
+				padding-top: 20px;
+				margin: 0 auto;
+				margin-bottom: 18px;
+			}
+
+			.lianxi_box {
+				width: 224px;
+				margin: 0 auto;
+			}
+
+			.lianxi {
+				width: 100px;
+				height: 29px;
+				border: 1px #e3e3e3 solid;
+				float: left;
+			}
+
+			.lianxi:hover {
+				border: solid 1px #f1921e;
+				background: #f1921e;
+			}
+
+			.lianxi img {
+				float: left;
+				margin: 8px 10px 0px 11px;
+			}
+
+			.QQtu2,
+			.wangwangtu2 {
+				display: none;
+			}
+
+			.lianxi:hover .QQtu1,
+			.lianxi:hover .wangwangtu1 {
+				display: none;
+			}
+
+			.lianxi:hover .QQtu2,
+			.lianxi:hover .wangwangtu2 {
+				display: block;
+			}
+
+			.lianxi p {
+				font-size: 12px;
+				line-height: 29px;
+				color: white;
+			}
+
+			.erweima {
+				margin: 0 auto;
+				margin-top: 24px;
+				margin-bottom: 15px;
+			}
+			/*页尾部分二版*/
+
+			.footer_box {
+				margin-top: 90px;
+				border-top: 1px solid #808080;
+			}
+
+			.footer {
+				width: 860px;
+				margin: 0 auto;
+			}
+
+			.footer h6 {
+				font-size: 12px;
+				color: #333;
+				margin: 0;
+				font-weight: bold;
+				float: left;
+				width: 389px;
+				line-height: 50px;
+			}
+
+			.dizhi {
+				font-size: 12px;
+				color: white;
+				margin: 0 auto;
+				padding-bottom: 20px;
+				width: 156px;
+				height: 16px;
+				border-right: 1px #2e2e2e solid;
+				border-left: 1px #2e2e2e solid;
+				margin-top: 6px;
+				float: left;
+				line-height: 46px;
+				font-weight: bold
+			}
+
+			.dizhi img {
+				margin-left: 30px;
+				padding-top: 10px;
+				float: left;
+				margin-right: 12px;
+			}
+
+			.dizhi p {
+				color: #333;
+				font-size: 14px;
+				float: left;
+			}
+
+			.weixin {
+				margin-top: 6px;
+				float: left;
+				width: 156px;
+				height: 36px;
+				border-right: 1px #2e2e2e solid;
+				position: relative;
+			}
+
+			.weixin img {
+				float: left;
+				margin-left: 30px;
+				margin-top: 10px;
+				margin-right: 12px;
+			}
+
+			.weixin p {
+				color: #333;
+				font-size: 14px;
+				float: left;
+				font-weight: bold;
+				line-height: 46px;
+			}
+
+			.weibo {
+				float: left;
+				margin-top: 6px;
+				position: relative;
+			}
+
+			.weibo img {
+				float: left;
+				margin-left: 30px;
+				margin-right: 12px;
+				margin-top: 8px
+			}
+
+			.weibo p {
+				float: left;
+				color: #333;
+				font-size: 14px;
+				float: left;
+				font-weight: bold;
+				line-height: 46px;
+			}
+
+			.erweima2 {
+				position: absolute;
+				left: -26px;
+				top: -165px;
+				display: none;
+			}
+
+			.weixin:hover .erweima2 {
+				display: block;
+			}
+
+			.weibo:hover .erweima2 {
+				display: block;
+			}
+
+			.header {
+				width: 100%;
+				height: 754px;
+				/* background:red; */
+				margin-bottom: 42px;
+			}
+
+			.header img {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<title>创想范短视频拍摄</title>
+	</head>
+
+	<body>
+		<!-- 右边固定烂开始 -->
+		<!-- <div class="field">
+			<ul class="field_consult">
+				<li class="field_consult_01">
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2885038311&site=qq&menu=yes">
+						<h3>在线咨询</h3>
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/consult_01.png" alt="">
+						<div class="field_consult_01_div">
+						</div>
+					</a>
+				</li>
+
+				<li class="field_consult_02">
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<h3>QQ</h3>
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/consult_02.png" alt="">
+						<div class="field_consult_02_div">
+						</div>
+					</a>
+
+				</li>
+
+				<li class="field_consult_03">
+					<h3>微信公众号</h3>
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/consult_03.png" alt="">
+					<div></div>
+				</li>
+
+				<li class="field_consult_04">
+					<h3>微信</h3>
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/consult_04.png" alt="">
+					<div>
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/weiixn-1.jpg" alt="">
+					</div>
+				</li>
+
+				<li class="field_consult_05">
+					<a href="#top">TOP</a>
+				</li>
+			</ul>
+		</div> -->
+		<!-- 右边固定烂结束 -->
+
+		<!-- <div class="box_top">
+			<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/bannerI.jpg">
+			<ul class="nav">
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="video.html">视频拍摄</a>
+				</li>
+				<li>
+					<a href="#">网店装修</a>
+				</li>
+				<li>
+					<a href="#">案例展示</a>
+				</li>
+				<li>
+					<a href="#">关于创想范</a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+		</div> -->
+
+	
+
+
+		<!-- header图片 -->
+		<div class="header">
+			<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/images/header.jpg" alt="">
+		</div>
+
+		<div class="box_01">
+			<div class="box1_title">
+				<h1>创想范定制化产品</h1>
+				<div></div>
+			</div>
+			<div class="box1_list">
+				<div class="list01" style="margin-left:120px;">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/box1-1.png">
+					<h1>主图视频</h1>
+					<p>产品360度全方位展示流量变现必备</p>
+					<div class="clearfix"></div>
+				</div>
+				<div class="list01">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/box1-2.png">
+					<h1>单品视频</h1>
+					<p>一键消除消费者的购买疑虑绝佳引流神器</p>
+					<div class="clearfix"></div>
+				</div>
+				<div class="list01">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/box1-3.png">
+					<h1>创意视频</h1>
+					<p>品牌营销法宝
+						<br> 店铺打造好品牌好产品
+					</p>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+
+			</div>
+		</div>
+		<div class="box_02">
+			<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/banner02.png">
+			<div class="box2_title">
+				<h1>一秒解锁短视频</h1>
+				<div></div>
+			</div>
+			<div class="yimiao"></div>
+		</div>
+		<div class="box_03">
+			<div class="box3_title">
+				<h1>我们提供的不只是视频，更是定制化服务</h1>
+				<div></div>
+			</div>
+
+			<div class="table_box">
+				<div class="table_1">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai3-1.png">
+					<h1>淘拍档给你定制化服务</h1>
+					<p>创想范七次蝉联金牌淘拍档，专业的技术及优先级的官方数据能很好地根据店铺产品、品牌现阶段发展情况，为您量身推荐合适的拍摄方案</p>
+
+				</div>
+				<div class="table_1 table_2">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai3-2.png">
+					<h1>拍摄技术升级</h1>
+					<p>拍摄从纯拍摄升级到二维动画、特效制作，再到三维建模展示</p>
+
+				</div>
+				<div class="clearfix"></div>
+				<div class="table_1 table_3">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai3-3.png">
+					<h1>电商创新拍摄团队</h1>
+					<p>2016年荣获阿里妈妈创新贡献奖由阿里妈妈为我们高校爱哦精简的电商拍摄团队背书</p>
+
+				</div>
+				<div class="table_1 table_4">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai3-4.png">
+					<h1>价格优惠 收费透明</h1>
+					<p>支付一般的价格享受非一般的服务</p>
+
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="box_04">
+			<div class="box3_title">
+				<h1>头图视频产品</h1>
+				<div></div>
+			</div>
+			<div class="toutu_box">
+				<div class="zou_toutu">
+					<div class="zou_toutu1">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai4-1.png">
+						<h1>头图视频
+							<span>基础版</span>
+						</h1>
+						<p>产品360度展示于主图猜你喜欢展示</p>
+						<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+							<div>联系我们</div>
+						</a>
+					</div>
+					<div class="zou_toutu1">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai4-2.png">
+						<h1>头图视频
+							<span>升级版</span>
+						</h1>
+						<p>产品细节特写展示猜你喜欢展示</p>
+						<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+							<div>联系我们</div>
+						</a>
+					</div>
+					<div class="zou_toutu1">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai4-3.png">
+						<h1>头图视频
+							<span>至尊版</span>
+						</h1>
+						<p>模特穿搭多角色战士猜你喜欢展示</p>
+						<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+							<div>联系我们</div>
+						</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="you_toutu">
+					<div class="teshutuxing">头图视频案例</div>
+					<div class="toutu_wenan">
+						<p>
+							<span>店铺背景：</span>店铺主营帽子，主消费人群是18-25岁年轻女生，他们追求时尚、个性</p>
+						<p>
+							<span>拍摄方案：</span>拍摄时尚炫酷、街头风的模特头图展示视频</p>
+						<p>
+							<span>效果呈现：</span>视频上线一个月左右后，宝贝的支付转化率提升了50%</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="box_05">
+			<div class="box2_title">
+				<h1>创意视频产品</h1>
+				<div></div>
+			</div>
+			<div class="danpin_box">
+				<div class="zou_toutu zuo_danpin">
+					<div class="zou_toutu1">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai4-2.png">
+						<h1>单品视频
+							<span>创想版</span>
+						</h1>
+						<p>产品结构、卖点、使用方法展示于详情页、有好货</p>
+						<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+							<div>联系我们</div>
+						</a>
+					</div>
+					<div class="zou_toutu1">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai5-1.png">
+						<h1>单品视频
+							<span>升级版</span>
+						</h1>
+						<p>模特穿搭多镜头多角度创意战士于详情页、有好货立即查看</p>
+						<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+							<div>联系我们</div>
+						</a>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="you_toutu you_danpin">
+					<div class="teshutuxing teshutuxing2">单品视频案例</div>
+					<div class="toutu_wenan danpin_wenan">
+						<p>
+							<span>店铺背景：</span>主营点动按摩器的天猫店铺，店铺无法抓住消费人群的诉求，成交转化差</p>
+						<p>
+							<span>拍摄方案：</span>为了拉近消费者鱼产品的距离，以代入感的生活应用场景来直观眼屎产品的使用和体验过程</p>
+						<p>
+							<span>效果呈现：</span>视频上线不到一个月产品流量翻倍，PC端的下单转化率提高1%</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+
+			</div>
+		</div>
+		<div class="box_06">
+			<div class="box2_title box6_title">
+				<h1>创意视频产品</h1>
+				<div></div>
+			</div>
+			<div class="box6_listbox">
+				<div class="box6_list1">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai6-1.png">
+					<h1>故事性微电影型创意</h1>
+					<p>创想推荐产品，私人订制和策划+精美后期制作全包服务</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="box6_list1">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai6-2.png">
+					<h1>工匠工艺纪录片型创意</h1>
+					<p>在店铺首页、每日好店、必买清单展示</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="box6_list1">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai6-3.png">
+					<h1>多产品展示型创意</h1>
+					<p>在店铺首页、每日好店、必买清单展示</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="box6_list1">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai6-4.png">
+					<h1>品牌营销宣传片</h1>
+					<p>在店铺首页、每日好店、必买清单展示</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="clearfix" style="padding-bottom: 55px;"></div>
+				<div class="box6_list1">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai6-5.png">
+					<h1>MG动画型演示介绍</h1>
+					<p>在店铺首页、每日好店、必买清单展示</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="you_toutu you_danpin you_chuangyi">
+					<div class="teshutuxing2 teshutuxing3">创意视频案例</div>
+					<div class="toutu_wenan danpin_wenan chuangyi_wenan">
+						<p>
+							<span>店铺背景：</span>小众复古女包店铺，定位不明确，产品风格不明显，产品销量低</p>
+						<p>
+							<span>拍摄方案：</span>视频拍摄突出该品牌的匠心工艺，视觉上突出复古高端风</p>
+						<p style="padding-bottom: 32px;">
+							<span>效果呈现：</span>平均每天有3000人观看视频，当天成交额破万</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!--<div class="box6_listbox"></div>-->
+		</div>
+		<div class="box_07">
+			<div class="box2_title box7_title">
+				<h1>热销产品</h1>
+				<div></div>
+			</div>
+			<div class="box7list_box">
+				<div class="box7_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai7-1.png">
+					<h1>单品视频创想版</h1>
+					<p style="margin-bottom: 33px;">创想实力派产品，案例店铺应用后流量翻倍</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="box7_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai7-2.png">
+					<h1>单品视频升级版</h1>
+					<p>创想优选产品，配备专属模特多方位拍摄，案例店铺应用后转化率翻倍</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="box7_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai7-3.png">
+					<h1>故事性微电影型创意</h1>
+					<p style="margin-bottom: 33px;">创想推荐产品，私人订制和策划+精美后期制作的全包服务</p>
+					<a href="http://wpa.qq.com/msgrd?v=3&uin=2885601199&site=qq&menu=yes">
+						<div>联系我们</div>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="box_08">
+			<div class="box2_title box8_title">
+				<h1>展示渠道位置</h1>
+				<div></div>
+			</div>
+			<div class="box8list_box">
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-1.png">
+					<p>主图</p>
+				</div>
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-2.png">
+					<p>猜你喜欢</p>
+				</div>
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-3.png">
+					<p>详情页</p>
+				</div>
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-4.png">
+					<p>店铺首页</p>
+				</div>
+				<div class="clearfix"></div>
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-5.png">
+					<p>每日好店</p>
+				</div>
+
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-6.png">
+					<p>有好货</p>
+				</div>
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-7.png">
+					<p>爱逛街</p>
+				</div>
+				<div class="box8_list">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai8-8.png">
+					<p>必买清单</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+		<div class="box_09">
+			<div class="box3_title box9_title">
+				<h1>为您的视频服务到底</h1>
+				<div></div>
+			</div>
+			<div class="fenlei_box">
+				<div class="fenlei">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai9-1.png">
+					<h1>卖家随时在线</h1>
+					<p>如果您对视频产品有任何问题，创想范随时为您解答</p>
+				</div>
+				<div class="fenlei">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai9-2.png" style="padding-top:13px;">
+					<h1>内部审核把关</h1>
+					<p>视频产品会先经由创想范内部审核，通过后才会发给您</p>
+				</div>
+				<div class="fenlei">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai9-3.png" style="padding-top:8px;">
+					<h1>坚持合理修改</h1>
+					<p>凡是由创想范导致的错误创想保证免费帮您修改</p>
+				</div>
+				<div class="fenlei" style="margin-top: -6px;">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/mokuai9-4.png">
+					<h1>视频效果跟踪</h1>
+					<p>创想范会有专属运营人员对您的视频进行数据跟踪</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="box_10">
+			<a href="">
+				<div>创想范，您的短视频经纪人</div>
+			</a>
+		</div>
+		<!--<div class="box_bottom">
+			<div class="bottom_box">
+				<img src="images/logo.png" class="logo">
+				<div class="lianxi_box">
+					<a href=""><div class="lianxi" style="margin-right:20px;">
+						<img src="images/QQ-orange.png" class="QQtu1">
+						<img src="images/QQ-white.png" class="QQtu2">
+						<p>QQ联系</p>
+					</div></a>
+					<a href=""><div class="lianxi">
+						<img src="images/wangwang-orange.png" class="wangwangtu1">
+						<img src="images/wangwang-white.png" class="wangwangtu2">
+						<p>旺旺联系</p>
+					</div></a>
+					<div class="clearfix"></div>
+				</div>
+				<img src="images/erweima-2.png" class="erweima">
+				<p class="dizhi">公司地址：海珠区客村杨协成电子创意园A126</p>
+			</div>
+		</div>-->
+		<div class="footer_box">
+			<div class="footer">
+				<h6>首页 丨 视频拍摄 丨 网店装修 丨 案例展示 丨 关于创想范
+					<script src="https://s19.cnzz.com/z_stat.php?id=1270513721&web_id=1270513721" language="JavaScript"></script>
+				</h6>
+				<div class="dizhi">
+					<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/dizhi.png">
+					<p>公司地址</p>
+				</div>
+				<a href="#">
+					<div class="weixin">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/weixin.png">
+						<p>微信公众</p>
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/erweima-2.png" class="erweima2">
+					</div>
+				</a>
+				<a href="#">
+					<div class="weibo">
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/weibo.png">
+						<p>新浪微博</p>
+						<img src="http://cxf-img-new.b0.upaiyun.com/cxf/images/erweima-3.png" class="erweima2">
+					</div>
+				</a>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="https://gytk5.kuaishang.cn/bs/ks.j?cI=859564&fI=84245" charset="utf-8"></script>
+
+		<script src="http://cxf-img-new.b0.upaiyun.com/cxf/lib/jquery/jquery.min.js"></script>
+		<script>
+			$('.field_consult_01').mouseenter(function () {
+				$('.field_consult_01').css('background', '#395e61');
+				// $('.field_consult_01>div').css('display','block');
+			})
+
+			$('.field_consult_01').mouseleave(function () {
+				$('.field_consult_01').css('background', 'none');
+				// $('.field_consult_01>div').css('display','none');
+			})
+
+			$('.field_consult_02').mouseenter(function () {
+				$('.field_consult_02').css('background', '#5eb8e8');
+				// $('.field_consult_02>div').css('display','block');
+			})
+
+			$('.field_consult_02').mouseleave(function () {
+				$('.field_consult_02').css('background', 'none');
+				// $('.field_consult_02>div').css('display','none');
+			})
+			$('.field_consult_03').mouseenter(function () {
+				$('.field_consult_03').css('background', '#f5ce00');
+				$('.field_consult_03>div').css('display', 'block');
+			})
+			$('.field_consult_03').mouseleave(function () {
+				$('.field_consult_03').css('background', 'none');
+				$('.field_consult_03>div').css('display', 'none');
+			})
+
+			$('.field_consult_04').mouseenter(function () {
+				$('.field_consult_04').css('background', '#6cbd27');
+				$('.field_consult_04>div').css('display', 'block');
+			})
+			$('.field_consult_04').mouseleave(function () {
+				$('.field_consult_04').css('background', 'none');
+				$('.field_consult_04>div').css('display', 'none');
+			})
+
+			$('.field_consult_05').mouseenter(function () {
+				$('.field_consult_05').css('background', '#f37500');
+				$('.field_consult_05>div').css('display', 'block');
+				$('.field_consult_05>a').css('text-decoration', 'none');
+			})
+			$('.field_consult_05').mouseleave(function () {
+				$('.field_consult_05').css('background', 'none');
+				$('.field_consult_05>div').css('display', 'none');
+			})
+
+			$('.field_consult_05').click(function () {
+				$('.field_consult_05>a').css('text-decoration', 'none');
+			})
+
+
+
+			// 鼠标已过去，遮罩层不见
+
+			$('.after_03').mouseenter(function () {
+				$('.after_03').css('display', 'none');
+				console.log(11111)
+			})
+			$('.after_01').mouseleave(function () {
+				$('.after_03').css('display', 'block');
+			})
+
+			$('.after_04').mouseenter(function () {
+				$('.after_04').css('display', 'none');
+
+			})
+			$('.after_02').mouseleave(function () {
+				$('.after_04').css('display', 'block');
+			})
+		</script>
+	</body>
+
+</html>
